@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление бронированиями</title>
+    <link rel="shortcut icon" href="assets/images/Logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" href="assets/css/orders-management.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img class="logo-icon" src="assets/images/Logo.png" alt="Путешественник">
+            </a>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="search.html" class="nav-link">Поиск</a></li>
+                    <li><a href="login.html" class="nav-link">Войти</a></li>
+                    <li><a href="profile.html" class="nav-link">Личный кабинет</a></li>
+                    <li><a href="#" class="nav-link">Избранное</a></li>
+                    <li><a href="#" class="nav-link">Бронирования</a></li>
+                    <li><a href="#" class="nav-link">Мои заказы</a></li>
+                    <li><span class="phone-header">8-800-777-55-77</span></li>
+                    <li><a href="#" class="nav-link"><img class="alarm" src="assets/images/icons/Alarm.png" alt="Уведомление"></a></li>
+                    <li><a href="#" class="btn btn-outline">Задать вопрос</a></li>
+                </ul>
+            </nav>
+            <label for="menu-toggle">
+                <img class="menu" src="assets/images/icons/Menu.png" alt="Меню">
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="orders-title">Управление бронированиями</h2>
+            
+            <!-- Фильтры -->
+            <div class="filters-section">
+                <div class="filters-row">
+                    <div class="filter-item">
+                        <label>Сортировать по:</label>
+                        <select class="form-control">
+                            <option>Дате (новые)</option>
+                            <option>Дате (старые)</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>Фильтр по статусу:</label>
+                        <select class="form-control">
+                            <option disabled selected>Все статусы</option>
+                            <option>На модерации</option>
+                            <option>Подтверждено</option>
+                            <option>Не подтверждено</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Список бронирований -->
+            <div class="bookings-list">
+                <!-- На модерации -->
+                <div class="booking-card pending" style="border-left-color: orange;">
+                    <div class="booking-card-flex">
+                        <img src="assets/images/hotel/hotel1.webp" alt="Гранд Отель" class="booking-image">
+                        <div class="booking-info">
+                            <div class="booking-header">
+                                <div>
+                                    <span class="booking-hotel">Гранд Отель</span>
+                                    <span class="booking-guest">Иванов И.И.</span>
+                                </div>
+                                <span class="booking-status" style="background: rgba(255, 165, 0, 0.1); color: orange;">На модерации</span>
+                            </div>
+                            <p>Москва, Тверская ул., 1</p>
+                            <div class="booking-dates">
+                                <span>Заезд: 10.05.2024</span>
+                                <span>Выезд: 15.05.2024</span>
+                            </div>
+                            <p>Гости: 2 взрослых</p>
+                            <p>Пожелания: Номер с видом на город, дополнительная кровать</p>
+                        </div>
+                    </div>
+                    <div class="booking-actions-right">
+                        <button class="btn btn-small btn-gold">Подтвердить</button>
+                        <button class="btn btn-small btn-outline reject-btn">Отклонить</button>
+                    </div>
+                </div>
+
+                <!-- На модерации 2 -->
+                <div class="booking-card pending" style="border-left-color: orange;">
+                    <div class="booking-card-flex">
+                        <img src="assets/images/hotel/hotel2.webp" alt="Астория" class="booking-image">
+                        <div class="booking-info">
+                            <div class="booking-header">
+                                <div>
+                                    <span class="booking-hotel">Астория</span>
+                                    <span class="booking-guest">Петров П.П.</span>
+                                </div>
+                                <span class="booking-status" style="background: rgba(255, 165, 0, 0.1); color: orange;">На модерации</span>
+                            </div>
+                            <p>Санкт-Петербург, ул. Морская, 1</p>
+                            <div class="booking-dates">
+                                <span>Заезд: 20.06.2024</span>
+                                <span>Выезд: 25.06.2024</span>
+                            </div>
+                            <p>Гости: 1 взрослый</p>
+                            <p>Пожелания: Тихий номер</p>
+                        </div>
+                    </div>
+                    <div class="booking-actions-right">
+                        <button class="btn btn-small btn-gold">Подтвердить</button>
+                        <button class="btn btn-small btn-outline reject-btn">Отклонить</button>
+                    </div>
+                </div>
+
+                <!-- Подтверждено -->
+                <div class="booking-card confirmed">
+                    <div class="booking-card-flex">
+                        <img src="assets/images/hotel/hotel3.webp" alt="Рэдиссон Сочи" class="booking-image">
+                        <div class="booking-info">
+                            <div class="booking-header">
+                                <div>
+                                    <span class="booking-hotel">Рэдиссон Сочи</span>
+                                    <span class="booking-guest">Сидоров С.С.</span>
+                                </div>
+                                <span class="booking-status status-confirmed">Подтверждено</span>
+                            </div>
+                            <p>Сочи, Курортный пр., 10</p>
+                            <div class="booking-dates">
+                                <span>Заезд: 01.07.2024</span>
+                                <span>Выезд: 10.07.2024</span>
+                            </div>
+                            <p>Гости: 3 взрослых, 1 ребенок</p>
+                            <p>Пожелания: Семейный номер, детская кроватка</p>
+                        </div>
+                    </div>
+                    <div class="booking-actions-right">
+                        <button class="btn btn-small btn-outline change-status-btn">Изменить статус</button>
+                    </div>
+                </div>
+
+                <!-- Не подтверждено -->
+                <div class="booking-card" style="border-left-color: var(--error);">
+                    <div class="booking-card-flex">
+                        <img src="assets/images/hotel/hotel4.webp" alt="Шаляпин" class="booking-image">
+                        <div class="booking-info">
+                            <div class="booking-header">
+                                <div>
+                                    <span class="booking-hotel">Шаляпин</span>
+                                    <span class="booking-guest">Козлова А.А.</span>
+                                </div>
+                                <span class="booking-status" style="background: rgba(220, 53, 69, 0.1); color: var(--error);">Не подтверждено</span>
+                            </div>
+                            <p>Казань, ул. Баумана, 1</p>
+                            <div class="booking-dates">
+                                <span>Заезд: 15.08.2024</span>
+                                <span>Выезд: 18.08.2024</span>
+                            </div>
+                            <p>Гости: 2 взрослых</p>
+                            <p>Пожелания: Нет</p>
+                            <p style="color: var(--error);">Причина отказа: Нет свободных номеров</p>
+                        </div>
+                    </div>
+                    <div class="booking-actions-right">
+                        <button class="btn btn-small btn-outline change-status-btn">Изменить статус</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+">8-800-777-55-77</a></li>
+                    <li><a href="mailto:">hotel@hotel.ru</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Клиентам</h4>
+                <ul>
+                    <li><a href="#">Как забронировать</a></li>
+                    <li><a href="#">Частые вопросы</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Партнерам</h4>
+                <ul>
+                    <li><a href="add.html">Добавить отель</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Авторизация</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                    <li><a href="#">Задать вопрос</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traveler. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление отеля</title>
+    <link rel="shortcut icon" href="assets/images/Logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/add.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img class="logo-icon" src="assets/images/Logo.png" alt="Путешественник">
+            </a>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="search.html" class="nav-link">Поиск</a></li>
+                    <li><a href="login.html" class="nav-link">Войти</a></li>
+                    <li><a href="profile.html" class="nav-link">Личный кабинет</a></li>
+                    <li><a href="#" class="nav-link">Избранное</a></li>
+                    <li><a href="#" class="nav-link">Бронирования</a></li>
+                    <li><a href="#" class="nav-link">Мои заказы</a></li>
+                    <li><span class="phone-header">8-800-777-55-77</span></li>
+                    <li><a href="#" class="nav-link"><img class="alarm" src="assets/images/icons/Alarm.png" alt="Уведомление"></a></li>
+                    <li><a href="#" class="btn btn-outline">Задать вопрос</a></li>
+                </ul>
+            </nav>
+            <label for="menu-toggle">
+                <img class="menu" src="assets/images/icons/Menu.png" alt="Меню">
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="container page-add-container">
+            <h2 class="page-add-title">Добавление информации об отеле</h2>
+            
+            <div class="page-add-card">
+                <form>
+                    <!-- Информация -->
+                    <h3 class="page-add-section-title">Карточка отеля</h3>
+                    
+                    <div class="form-group">
+                        <label class="required">Контактный номер телефона отеля</label>
+                        <input type="tel" class="form-control" required placeholder="+7 (495) 123-45-67">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">E-mail отеля</label>
+                        <input type="email" class="form-control" required placeholder="hotel@example.ru">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">Юридические данные отеля</label>
+                        <textarea class="form-control" rows="3" required placeholder="ИНН, ОГРН, юридический адрес..."></textarea>
+                    </div>
+                    
+                    <details>
+                        <summary style="cursor: pointer; color: var(--dark-blue); font-weight: 600;">Установить пароль для управления отелем</summary>
+                        <div class="password-details-content">
+                            <div class="form-group">
+                                <label>Пароль</label>
+                                <input type="password" class="form-control" placeholder="Минимум 8 символов">
+                            </div>
+                            <div class="form-group">
+                                <label>Подтверждение пароля</label>
+                                <input type="password" class="form-control" placeholder="Повторите пароль">
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <div class="form-group">
+                        <label class="required">Количество звезд</label>
+                        <select class="form-control" required>
+                            <option disabled selected>Выберите категорию</option>
+                            <option>5 звезд</option>
+                            <option>4 звезды</option>
+                            <option>3 звезды</option>
+                            <option>2 звезды</option>
+                            <option>1 звезда</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Фотографии отеля</label>
+                        <div class="photo-upload-grid">
+                            <div class="photo-upload-item">
+                                <p>Загрузить фото</p>
+                                <input type="file">
+                            </div>
+                            <div class="photo-upload-item">
+                                <p>Загрузить фото</p>
+                                <input type="file">
+                            </div>
+                            <div class="photo-upload-item">
+                                <p>Загрузить фото</p>
+                                <input type="file">
+                            </div>
+                        </div>
+                        <p class="photo-upload-hint">Максимум 3 фотографии</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Дополнительная информация об отеле</label>
+                        <textarea class="form-control" rows="4" placeholder="Описание отеля, особенности, услуги..."></textarea>
+                    </div>
+
+                    <!-- Расположение -->
+                    <h3 class="page-add-section-title-large">Расположение</h3>
+                    
+                    <div class="form-group">
+                        <label class="required">Страна, город, район</label>
+                        <input type="text" class="form-control" required placeholder="Россия, Москва, ЦАО">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Вид отеля по типу</label>
+                        <select class="form-control">
+                            <option>Отель</option>
+                            <option>Апартаменты</option>
+                            <option>Хостел</option>
+                            <option>Гостевой дом</option>
+                            <option>Курортный отель</option>
+                        </select>
+                    </div>
+
+                    <!-- Удобства -->
+                    <h3 class="page-add-section-title-large">Удобства</h3>
+                    
+                    <div class="amenities-grid">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="wifi">
+                            <label for="wifi">Wi-Fi</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="parking">
+                            <label for="parking">Парковка</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="pool">
+                            <label for="pool">Бассейн</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="gym">
+                            <label for="gym">Фитнес-зал</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="restaurant">
+                            <label for="restaurant">Ресторан</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="spa">
+                            <label for="spa">СПА-центр</label>
+                        </div>
+                    </div>
+
+                    <!-- Согласие -->
+                    <div class="checkbox-group agree-checkbox">
+                        <input type="checkbox" id="agree" required>
+                        <label for="agree" class="required">Подтверждаю достоверность предоставленной информации и согласен на обработку персональных данных</label>
+                    </div>
+
+                    <!-- Примеры ошибок -->
+                    <div class="error-example">
+                        <p>Заполните все обязательные поля</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold submit-btn">Добавить отель</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+">8-800-777-55-77</a></li>
+                    <li><a href="mailto:">hotel@hotel.ru</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Клиентам</h4>
+                <ul>
+                    <li><a href="#">Как забронировать</a></li>
+                    <li><a href="#">Частые вопросы</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Партнерам</h4>
+                <ul>
+                    <li><a href="add.html">Добавить отель</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Авторизация</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                    <li><a href="#">Задать вопрос</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traveler. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

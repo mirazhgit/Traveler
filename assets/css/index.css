@@ -1,0 +1,47 @@
+/* Стили для главной страницы */
+.quick-search {
+    margin: 30px 0;
+}
+
+.quick-search-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.facts-section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.popular-hotels-section {
+    margin: 50px 0;
+}
+
+.popular-hotels-title {
+    margin-bottom: 30px;
+}
+
+.newsletter-section {
+    background-color: var(--light-gray);
+    padding: 40px;
+    border-radius: 16px;
+    margin: 40px 0;
+}
+
+.newsletter-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.newsletter-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form-group {
+    margin-bottom: 20px;
+}
+
+.newsletter-subscribe-btn {
+    width: 100%;
+}

@@ -1,0 +1,94 @@
+/* Фильтрация */
+.filters-section {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.range-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.range-input input {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid var(--light-gray);
+    border-radius: 6px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.page-item {
+    list-style: none;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--dark-blue);
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid var(--light-gray);
+}
+
+.page-link:hover,
+.page-link.active {
+    background: var(--gold);
+    color: var(--dark-blue);
+    border-color: var(--gold);
+}
+
+.search-map-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.list-view-btn {
+    flex: 1;
+    color: var(--dark-blue);
+}
+
+.map-view-btn {
+    flex: 1;
+}
+
+.search-result-count {
+    margin-bottom: 20px;
+}

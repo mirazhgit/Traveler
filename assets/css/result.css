@@ -1,0 +1,57 @@
+/* Стили для страницы результата */
+.result-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+}
+
+.result-card {
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.hotel-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hotel-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.hotel-gallery-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.hotel-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.hotel-description {
+    margin-top: 30px;
+}
+
+.hotel-description p {
+    line-height: 1.8;
+}
+
+/* Стили для печати */
+@media print {
+    .header, .footer, .btn {
+        display: none !important;
+    }
+    
+    body {
+        padding: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #000;
+    }
+}

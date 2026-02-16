@@ -1,0 +1,10 @@
+/* Стили для страницы регистрации */
+.register-submit-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.register-login-link {
+    text-align: center;
+    margin-top: 20px;
+}

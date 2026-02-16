@@ -1,0 +1,52 @@
+/* Стили для страницы управления бронированиями */
+.orders-title {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.filters-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter-item {
+    flex: 1;
+}
+
+.booking-card-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.booking-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.booking-info {
+    flex: 1;
+}
+
+.booking-guest {
+    margin-left: 15px;
+    color: #666;
+}
+
+.booking-actions-right {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.reject-btn {
+    color: var(--dark-blue);
+}
+
+.change-status-btn {
+    color: var(--dark-blue);
+}

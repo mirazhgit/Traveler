@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск отелей</title>
+    <link rel="shortcut icon" href="assets/images/Logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img class="logo-icon" src="assets/images/Logo.png" alt="Путешественник">
+            </a>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="search.html" class="nav-link">Поиск</a></li>
+                    <li><a href="login.html" class="nav-link">Войти</a></li>
+                    <li><a href="profile.html" class="nav-link">Личный кабинет</a></li>
+                    <li><a href="#" class="nav-link">Избранное</a></li>
+                    <li><a href="#" class="nav-link">Бронирования</a></li>
+                    <li><a href="#" class="nav-link">Мои заказы</a></li>
+                    <li><span class="phone-header">8-800-777-55-77</span></li>
+                    <li><a href="#" class="nav-link"><img class="alarm" src="assets/images/icons/Alarm.png" alt="Уведомление"></a></li>
+                    <li><a href="#" class="btn btn-outline">Задать вопрос</a></li>
+                </ul>
+            </nav>
+            <label for="menu-toggle">
+                <img class="menu" src="assets/images/icons/Menu.png" alt="Меню">
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Форма поиска (дубликат с главной) -->
+            <section class="search-form">
+                <h2>Найдите идеальный отель</h2>
+                <div class="search-grid">
+                    <div class="search-field">
+                        <label>Направление/город, страна</label>
+                        <input type="text" placeholder="Куда поедем?">
+                    </div>
+                    <div class="search-field">
+                        <label>Даты заезда-отъезда</label>
+                        <input type="text" placeholder="10.05.2024 - 15.05.2024">
+                    </div>
+                    <div class="search-field">
+                        <label>Количество гостей</label>
+                        <select>
+                            <option style="color: black;">1 взрослых</option>
+                            <option style="color: black;">2 взрослый</option>
+                            <option style="color: black;">1 взрслый, 1 детский</option>
+                            <option style="color: black;">2 взрослых, 2 детских</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <button class="btn btn-gold" style="width: 100%;">Поиск отеля</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="block-fix">
+                <!-- Фильтры -->
+                <aside class="filters-section">
+                    <h3 style="margin-bottom: 20px;">Фильтры</h3>
+                    
+                    <div class="search-map-buttons">
+                        <button class="btn btn-small btn-outline list-view-btn">Списком</button>
+                        <button class="btn btn-small btn-gold map-view-btn">На карте</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Избранное</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox">
+                                <input type="checkbox"> Только избранные
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Сортировка</h4>
+                        <select class="form-control">
+                            <option>По популярности</option>
+                            <option>Сначала дешевле</option>
+                            <option>Сначала дороже</option>
+                            <option>По рейтингу</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Цена за ночь (RUB)</h4>
+                        <div class="range-input">
+                            <input type="number" placeholder="от" value="1000">
+                            <span>-</span>
+                            <input type="number" placeholder="до" value="20000">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Тип размещения</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox"> Отель</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Апартаменты</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Хостел</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Расположение (от центра)</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox"> До 1 км</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 1-3 км</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 3-5 км</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Удобства</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox"> Wi-Fi</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Парковка</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Бассейн</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Фитнес</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Питание</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox"> Без питания</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Завтрак</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Полупансион</label>
+                            <label class="filter-checkbox"><input type="checkbox"> Все включено</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Количество звезд</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox"> 5 звезд</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 4 звезды</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 3 звезды</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 2 звезды</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Оценка по отзывам</h4>
+                        <div class="filter-options">
+                            <label class="filter-checkbox"><input type="checkbox"> 9+</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 8-9</label>
+                            <label class="filter-checkbox"><input type="checkbox"> 7-8</label>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Результаты поиска -->
+                <div>
+                    <p class="search-result-count">Найдено отелей: 24</p>
+                    
+                    <div class="card-grid" style="grid-template-columns: 1fr;">
+                        <!-- Карточка 1 -->
+                        <div class="card card-fix">
+                            <img src="assets/images/hotel/hotel1.webp" alt="Отель" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="card-content">
+                                <div class="card-horizontal-content">
+                                    <h3 class="card-title">Гранд Отель</h3>
+                                    <span class="rating-badge">8.9</span>
+                                </div>
+                                <p class="card-location">Москва, ЦАО, Тверская ул., 1</p>
+                                <p>5 звезд</p>
+                                <p>0.5 км от центра</p>
+                                <p>+7 (495) 123-45-67</p>
+                                <div class="card-features">
+                                    <span class="feature-icon">📶</span>
+                                    <span class="feature-icon">🅿️</span>
+                                    <span class="feature-icon">🏊</span>
+                                </div>
+                                <p class="card-price">от 5 900 ₽ <small>/ночь</small></p>
+                                <p style="color: #666; font-size: 14px;">Роскошный отель в центре Москвы с видом на Кремль</p>
+                                <a href="result.html" class="btn btn-gold btn-small">Выбрать номер</a>
+                            </div>
+                        </div>
+
+                        <!-- Карточка 2 -->
+                        <div class="card card-fix">
+                            <img src="assets/images/hotel/hotel2.webp" alt="Отель" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="card-content">
+                                <div class="card-horizontal-content">
+                                    <h3 class="card-title">Астория</h3>
+                                    <span class="rating-badge">9.2</span>
+                                </div>
+                                <p class="card-location">Москва, Тверской р-н, ул. Тверская, 5</p>
+                                <p>4 звезды</p>
+                                <p>0.8 км от центра</p>
+                                <p>+7 (495) 123-45-67</p>
+                                <div class="card-features">
+                                    <span class="feature-icon">📶</span>
+                                    <span class="feature-icon">🅿️</span>
+                                    <span class="feature-icon">🍳</span>
+                                </div>
+                                <p class="card-price">от 4 500 ₽ <small>/ночь</small></p>
+                                <p style="color: #666; font-size: 14px;">Исторический отель с богатой историей</p>
+                                <a href="result.html" class="btn btn-gold btn-small">Выбрать номер</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Пагинация -->
+                    <ul class="pagination">
+                        <li class="page-item"><a href="#" class="page-link">«</a></li>
+                        <li class="page-item"><a href="#" class="page-link active">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">»</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+">8-800-777-55-77</a></li>
+                    <li><a href="mailto:">hotel@hotel.ru</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Клиентам</h4>
+                <ul>
+                    <li><a href="#">Как забронировать</a></li>
+                    <li><a href="#">Частые вопросы</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Партнерам</h4>
+                <ul>
+                    <li><a href="add.html">Добавить отель</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Авторизация</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                    <li><a href="#">Задать вопрос</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traveler. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

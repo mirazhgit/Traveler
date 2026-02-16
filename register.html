@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="shortcut icon" href="assets/images/Logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/register.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img class="logo-icon" src="assets/images/Logo.png" alt="Путешественник">
+            </a>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="search.html" class="nav-link">Поиск</a></li>
+                    <li><a href="login.html" class="nav-link">Войти</a></li>
+                    <li><a href="profile.html" class="nav-link">Личный кабинет</a></li>
+                    <li><a href="#" class="nav-link">Избранное</a></li>
+                    <li><a href="#" class="nav-link">Бронирования</a></li>
+                    <li><a href="#" class="nav-link">Мои заказы</a></li>
+                    <li><span class="phone-header">8-800-777-55-77</span></li>
+                    <li><a href="#" class="nav-link"><img class="alarm" src="assets/images/icons/Alarm.png" alt="Уведомление"></a></li>
+                    <li><a href="#" class="btn btn-outline">Задать вопрос</a></li>
+                </ul>
+            </nav>
+            <label for="menu-toggle">
+                <img class="menu" src="assets/images/icons/Menu.png" alt="Меню">
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <!-- Регистрация -->
+        <div class="form-container">
+            <h2>Регистрация</h2>
+            
+            <form>
+                <div class="form-group">
+                    <label class="required">E-mail</label>
+                    <input type="email" class="form-control" placeholder="example@mail.ru" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Имя</label>
+                    <input type="text" class="form-control" required minlength="2" placeholder="Иван">
+                </div>
+
+                <div class="form-group">
+                    <label>Фамилия</label>
+                    <input type="text" class="form-control" placeholder="Иванов">
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Телефон</label>
+                    <input type="tel" class="form-control" required pattern="\+7[0-9]{10}" placeholder="+79991234567">
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Пароль</label>
+                    <input type="password" class="form-control" required minlength="6" placeholder="Минимум 6 символов">
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Повтор пароля</label>
+                    <input type="password" class="form-control error" required placeholder="Повторите пароль">
+                    <span class="error-message">Пароли не совпадают</span>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree" class="required">Согласен на обработку персональных данных</label>
+                </div>
+
+                <button type="submit" class="btn btn-gold register-submit-btn">Зарегистрироваться</button>
+                
+                <p class="register-login-link">
+                    Уже есть аккаунт? <a href="login.html" style="color: var(--gold);">Войти</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li><a href="tel:+">8-800-777-55-77</a></li>
+                    <li><a href="mailto:">hotel@hotel.ru</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Клиентам</h4>
+                <ul>
+                    <li><a href="#">Как забронировать</a></li>
+                    <li><a href="#">Частые вопросы</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Партнерам</h4>
+                <ul>
+                    <li><a href="add.html">Добавить отель</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li><a href="#">Реклама</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Авторизация</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="search.html">Поиск</a></li>
+                    <li><a href="#">Задать вопрос</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Traveler. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* Стили для страницы добавления отеля */
+.page-add-container {
+    max-width: 800px;
+}
+
+.page-add-title {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.page-add-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.page-add-section-title {
+    margin-bottom: 20px;
+    color: var(--gold);
+    text-align: center;
+}
+
+.page-add-section-title-large {
+    margin: 30px 0 20px;
+    color: var(--gold);
+    text-align: center;
+}
+
+.photo-upload-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.photo-upload-item {
+    border: 2px dashed var(--light-gray);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.photo-upload-item p {
+    font-size: 12px;
+}
+
+.photo-upload-item input {
+    width: 117px;
+}
+
+.photo-upload-hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.password-details-content {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.agree-checkbox {
+    margin: 20px 0;
+}
+
+.error-example {
+    background-color: #f8d7da;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.error-example p {
+    color: var(--error);
+    text-align: center;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+}
+@media (max-width: 768px) {
+    .photo-upload-grid {
+        grid-template-columns:auto;
+    }
+
+    
+}
