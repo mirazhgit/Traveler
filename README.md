@@ -89,7 +89,7 @@
 ## 📁 Структура проекта
 
 ```
-traveler-frontend/
+traveler/
 │
 ├── index.html              # Главная страница
 ├── search.html             # Поиск отелей
