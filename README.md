@@ -122,12 +122,12 @@ traveler-frontend/
 
 1. **Клонируй репозиторий**
    ```bash
-   git clone https://github.com/твой-логин/traveler-frontend.git
+   git clone https://github.com/mirazhgit/traveler.git
    ```
 
 2. **Перейди в папку проекта**
    ```bash
-   cd traveler-frontend
+   cd traveler
    ```
 
 3. **Открой в браузере**
